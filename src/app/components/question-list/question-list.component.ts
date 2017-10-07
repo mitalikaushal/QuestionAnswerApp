@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { Question } from '../../models/Question';
 
 @Component({
   selector: 'app-question-list',
@@ -6,26 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question-list.component.css']
 })
 export class QuestionListComponent implements OnInit {
-  questions:Object[];
+  questions:Question[];
 
-  constructor() {
-    this.questions = [
-      {
-        ques:"What is your name?",
-        answer:"My name is John Snow"
-      },
-      {
-        ques:"What is your favourite color?",
-        answer:"My favourite color is red"
-      },
-      {
-        ques:"What is your favourite language?",
-        answer:"My favourite language is JavaScript"
-      }      
-    ];
+  constructor(public dataservice: DataService) {
+    
    }
 
   ngOnInit() {
+    this.questions = this.dataservice.getQuestions();
   }
 
 }
