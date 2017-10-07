@@ -1,7 +1,7 @@
 <div class="question">
     <div class="card">
       <div class="card-header">
-        {{question.ques}} <a href="#" (click)="question.hide = !question.hide">Show</a>
+        {{question.ques}}  <a href="#" (click)="question.hide = !question.hide">Show</a> | <a href="#" (click)="deleteQuestion(question)">Remove</a> 
       </div>
       <div class="card-block" [hidden] = "question.hide">
         <p class="card-text">
