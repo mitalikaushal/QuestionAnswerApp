@@ -7,12 +7,16 @@ import { DataService } from './services/data.service';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
+import { QuestionComponent } from './components/question/question.component';
+import { AddQuestionComponent } from './components/add-question/add-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    QuestionListComponent
+    QuestionListComponent,
+    QuestionComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,

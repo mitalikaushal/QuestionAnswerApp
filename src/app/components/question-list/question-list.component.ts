@@ -17,5 +17,8 @@ export class QuestionListComponent implements OnInit {
   ngOnInit() {
     this.questions = this.dataservice.getQuestions();
   }
+  addQuestion(question:Question){
+    this.dataservice.addQuestion(question);
+  }
 
 }
